@@ -20,7 +20,7 @@ regexp=\-O\d
 colours=green
 .........
 # -o
-regexp=\-o\s[^\s]+
+regexp=\-o\s.+\b
 colours=yellow
 .........
 # warning and error won't work, unless you redirect also
