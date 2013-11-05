@@ -156,7 +156,7 @@ if cfile != "" and colour:
     sys.exit(status and os.WEXITSTATUS(status))
 
 else:
-    pidp = os.fork() 
+    pidp = os.fork()
     if pidp == 0:
         os.execvp(args[0], args)
     try:

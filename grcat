@@ -12,7 +12,8 @@ colours = {
             'reverse'    :    "\033[7m",
             'concealed'  :    "\033[8m",
 
-            'black'      :    "\033[30m", 
+            'black'      :    "\033[30m",
+            'gray'       :    "\033[1;30m",
             'red'        :    "\033[31m",
             'green'      :    "\033[32m",
             'yellow'     :    "\033[33m",
@@ -20,8 +21,9 @@ colours = {
             'magenta'    :    "\033[35m",
             'cyan'       :    "\033[36m",
             'white'      :    "\033[37m",
+            'bright'     :    "\033[1;48m",
 
-            'on_black'   :    "\033[40m", 
+            'on_black'   :    "\033[40m",
             'on_red'     :    "\033[41m",
             'on_green'   :    "\033[42m",
             'on_yellow'  :    "\033[43m",
@@ -29,6 +31,8 @@ colours = {
             'on_magenta' :    "\033[45m",
             'on_cyan'    :    "\033[46m",
             'on_white'   :    "\033[47m",
+
+            'rv_gray'    :    "\033[1;47m",
 
             'beep'       :    "\007",
             'previous'   :    "prev",
@@ -66,7 +70,7 @@ home = []
 conffile = None
 if 'HOME' in os.environ:
     home = [os.environ['HOME']+"/.grc/"]
-conffilepath = [""] + home + ["/usr/local/share/grc/", "/usr/share/grc/"]
+conffilepath = [""] + home + ["/usr/local/share/grc/", "/usr/share/grc/", home[0] + 'conf/']
 conffile_arg = sys.argv[1] # tentative conffile
 for i in conffilepath:
     if os.path.isfile(i+conffile_arg):
@@ -88,7 +92,7 @@ while not is_last:
     ll = {'count':"more"}
     while 1:
         l = f.readline()
-        if l == "": 
+        if l == "":
             is_last = 1
             break
         if l[0] == "#" or l[0] == '\012':
@@ -203,7 +207,7 @@ while 1:
     clineprev = ""
     if not skip:
         for i in range(len(line)):
-            if cline[i] == clineprev: 
+            if cline[i] == clineprev:
                 nline = nline + line[i]
             else:
                 nline = nline + cline[i] + line[i]
