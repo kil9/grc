@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/env python
 
 import sys, os, string, re, signal, errno
 
@@ -70,8 +70,12 @@ home = []
 conffile = None
 if 'HOME' in os.environ:
     home = [os.environ['HOME']+"/.grc/"]
-conffilepath = [""] + home + ["/usr/local/share/grc/", "/usr/share/grc/", home[0] + 'conf/']
+if 'GRCHOME' in os.environ:
+    home = [os.environ['GRCHOME']]
+
+conffilepath = [""] + home + [home[0] + '/conf/']
 conffile_arg = sys.argv[1] # tentative conffile
+
 for i in conffilepath:
     if os.path.isfile(i+conffile_arg):
         conffile = i+conffile_arg

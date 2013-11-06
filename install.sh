@@ -1,14 +1,10 @@
 #!/bin/sh
 
-DESTDIR=$1
-BINDIR=$DESTDIR/usr/bin
-LIBDIR=$DESTDIR/usr/share/grc
-MANDIR=$DESTDIR/usr/share/man/man1
-CONFDIR=$DESTDIR/etc
+APP_NAME='grc portable'
+APP_HOME="`dirname "$0"`"
+APP_HOME=`cd "$APP_HOME" > /dev/null; pwd`
 
-mkdir -p $BINDIR || true
-cp -fv grc grcat $BINDIR
-mkdir -p $LIBDIR || true
-cp -fv conf.* $LIBDIR
-mkdir -p $CONFDIR || true
-cp -fv grc.conf $CONFDIR
+echo "export GRCHOME=$GRCHOME # grc" >> $HOME/.bashrc
+echo 'export PATH=$GRCHOME/bin:$PATH # grc' >> $HOME/.bashrc
+
+echo 'install complete'
