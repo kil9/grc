@@ -49,3 +49,7 @@ count=more
 regexp=\[DEBUG\](.*)
 colours=gray
 count=more
+=======
+regexp=\*{3}.*\*{3}
+colours=green
+count=once
