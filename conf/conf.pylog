@@ -26,17 +26,17 @@ colours=bold magenta
 count=more
 ======
 # log level - info
-regexp=\[INFO\]
+regexp=\[(info|INFO)\]
 colours=blue
 count=more
 ======
 # log level - error
-regexp=\[ERROR\]
+regexp=\[(error|ERROR)\]
 colours=on_red
 count=more
 ======
 # log level - critical
-regexp=\[CRITICAL\]
+regexp=\[(critical|CRITICAL)\]
 colours=on_red
 count=more
 ======
@@ -46,7 +46,7 @@ colours=bold green
 count=more
 ======
 # log level - debug messages
-regexp=\[DEBUG\](.*)
+regexp=\[(debug|DEBUG)\](.*)
 colours=gray
 count=more
 =======
