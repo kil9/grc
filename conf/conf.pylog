@@ -30,6 +30,11 @@ regexp=\[(info|INFO)\]
 colours=blue
 count=more
 ======
+# log level - warning
+regexp=\[(warning|WARNING)\]
+colours=yellow
+count=more
+======
 # log level - error
 regexp=\[(error|ERROR)\]
 colours=on_red
