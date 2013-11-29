@@ -50,6 +50,12 @@ regexp=\[(debug|DEBUG)\](.*)
 colours=gray
 count=more
 =======
+# entry/exit notices
 regexp=\*{3}.*\*{3}
 colours=green
+count=once
+=======
+# little benches
+regexp=\d*?\.\d{2} seconds
+colours=white
 count=once
