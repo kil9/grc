@@ -64,3 +64,23 @@ count=once
 regexp=\d*?\.\d{2} seconds
 colours=white
 count=once
+======
+# mayaka - subscribe webtoon
+regexp=사용자.*웹툰 구독.*
+colours=green
+count=once
+======
+# mayaka - submit reply
+regexp=사용자.*리플 등록.*
+colours=bold green
+count=once
+======
+# chitanda - updated
+regexp=업데이트.*
+colours=magenta
+count=once
+======
+# chitanda - added
+regexp=웹툰 추가.*
+colours=bold magenta
+count=once
