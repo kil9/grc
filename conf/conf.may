@@ -59,3 +59,48 @@ count=more
 regexp=\*{3}.*\*{3}
 colours=green
 count=once
+=======
+# little benches
+regexp=\d*?\.\d{2} seconds
+colours=white
+count=once
+======
+# mayaka - subscribe webtoon
+regexp=사용자.*웹툰 읽기.*
+colours=bright
+count=once
+======
+# mayaka - subscribe webtoon
+regexp=사용자.*구독자 보기.*
+colours=bright
+count=once
+======
+# mayaka - subscribe webtoon
+regexp=사용자.*웹툰 구독.*
+colours=green
+count=once
+======
+# mayaka - unsubscribe webtoon
+regexp=사용자.*구독 취소.*
+colours=magenta
+count=once
+======
+# mayaka - submit reply
+regexp=사용자.*리플 등록.*
+colours=bold green
+count=once
+======
+# chitanda - updated
+regexp=업데이트.*
+colours=magenta
+count=once
+======
+# chitanda - added
+regexp=웹툰 추가.*
+colours=bold magenta
+count=once
+======
+# chitanda - updated
+regexp=[123456789]+ updated
+colours=bold magenta
+count=once
